@@ -55,13 +55,17 @@ Current Job Title: "AS" (e.g., "AS Developer"). Exclude with "NOT" (e.g., "AS NO
 Previous Job Title: "PREVIOUSLY_AS" for past titles. Exclude with "NOT" (e.g., "PREVIOUSLY_AS NOT Manager").
 Employer: "AT" for current, "PREVIOUSLY_AT" for past employers. Combine with "NOT" for exclusions.
 Language Skills: "SPEAKS" (e.g., "SPEAKS English").
-Gender: "IS" (e.g., "IS FEMALE" or "IS MALE").
 Job Change Likelihood: "CHANGE_PROBABILITY ABOVE" (e.g., "CHANGE_PROBABILITY ABOVE 55").
 Relocation Likelihood: "MOBILITY ABOVE" (e.g., "MOBILITY ABOVE 55").
 Professional Experience: "YEARS_WORKING" to specify range (e.g., "YEARS_WORKING 2 TO 4").
 Position Tenure: "YEARS_IN_JOB" for current role duration.
 Contact Info: "HAS EMAIL" and "HAS PHONE" for availability.
-Professional Groups: Include or exclude with "IS" or "IS NOT" (e.g., "IS FREELANCER", "IS NOT STUDENT").
+Professional Groups: Freelancer - Use IS FREELANCER to find only freelancer or IS NOT FREELANCER to exclude freelancer
+Consultants - Use IS CONSULTANT to find only consultants or IS NOT CONSULTANT to exclude consultants
+Entrepreneurs - IS ENTREPRENEUR to find only entrepreneurs or IS NOT ENTREPRENEUR to exclude entrepreneurs
+Recruiters - IS NOT RECRUITER to exclude recruiters
+Scientists - IS SCIENTIST to find only scientists or IS NOT SCIENTIST to exclude scientists
+Students - IS STUDENT to find only students or IS NOT STUDENT to exclude students
 Wildcards: Use "*" for partial matches (e.g., "Manag").
 Term Relevance: Enhance with "^" (e.g., "Java^4 OR J2EE").
 Important Notes:
@@ -98,7 +102,7 @@ def display_login_form():
                 
 def display_main_app():
     st.title('AI Boolean Query Generator')
-    model_options = ["ft:gpt-3.5-turbo-1106:talentwunder:no-german:92cdiAEi", "ft:gpt-3.5-turbo-1106:talentwunder::91cYiy12", "gpt-4-0125-preview"]
+    model_options = ["ft:gpt-3.5-turbo-1106:talentwunder:final-no-german:92fExPAE", "gpt-4-0125-preview"]
     selected_model = st.selectbox("Select the model:", model_options)
     user_input = st.text_area("Enter your prompt:", height=150)
 
