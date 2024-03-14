@@ -98,7 +98,7 @@ def display_login_form():
                 
 def display_main_app():
     st.title('AI Boolean Query Generator')
-    model_options = ["ft:gpt-3.5-turbo-1106:talentwunder:no-german:92cdiAEi", "gpt-4-0125-preview"]
+    model_options = ["ft:gpt-3.5-turbo-1106:talentwunder:no-german:92cdiAEi", "ft:gpt-3.5-turbo-1106:talentwunder::91cYiy12", "gpt-4-0125-preview"]
     selected_model = st.selectbox("Select the model:", model_options)
     user_input = st.text_area("Enter your prompt:", height=150)
 
